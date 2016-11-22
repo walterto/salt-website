@@ -1,0 +1,12 @@
+.main-folder{
+width: 100%;
+float: left;
+margin-left: 0;
+margin-right: 0;
+position: absolute;
+text-align: center;
+height: 100%;
+z-index: 10;
+cursor: default;
+cursor: url(Add File), auto;
+}
