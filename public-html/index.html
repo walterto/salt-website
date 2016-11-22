@@ -16,22 +16,21 @@
 
 </style>
  </head>
- <body>
-<div>
-<div id="particles-js"></div>
-<div id="particle-slider" class="main-folder">
-    <div class="slides">
-      <div id="first-slide" class="slide" data-src="assets/logo.png">
-      </div>
+ <body onresize="resizePage()" onload="resizePage()">
+    <div>
+        <div id="particles-js"></div>
+        <div id="particle-slider" class="main-folder">
+            <div class="slides">
+                <div id="first-slide" class="slide" data-src="assets/logo.png">
+                </div>
+            </div>
+        <canvas class="draw"></canvas>
     </div>
-    <canvas class="draw"></canvas>
-</div>
-</div>
-   <div class="clearfix borderbox" id="page"><!-- group -->
-   <div class="clip_frame grpelem" id="u104"><!-- image -->
-   </div>
-   <div class="size_fixed grpelem" id="u227"><!-- custom html -->
-  </div>
+    <div class="clearfix borderbox" id="page"><!-- group -->
+    <div class="clip_frame grpelem" id="u104"><!-- image -->
+    </div>
+    <div class="size_fixed grpelem" id="u227"><!-- custom html -->
+    </div>
   <!-- JS includes -->
   <script src="scripts/jquery-1.8.3.min.js?crc=169078940" type="text/javascript"></script>
   <!-- Other scripts -->
@@ -49,8 +48,11 @@
     <!-- Particle JS code-->
   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">  </script> 
   <script src="scripts/particlejs-init.js"></script>
-
-
-
+  <script>
+    function resizePage(){
+    var pageHeight = window.innerHeight;
+    document.body.style.height = pageHeight+"px";
+    }
+  </script>
    </body>
 </html>
