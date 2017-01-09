@@ -1,0 +1,21 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+	address 45.32.100.143
+	netmask 255.255.254.0
+	gateway 45.32.100.1
+	dns-nameservers 108.61.10.10
+	post-up ip route add 169.254.0.0/16 dev eth0
+
+iface eth0 inet6 static
+	address 2001:19f0:4400:41b6:5400:00ff:fe42:746d
+	netmask 64
+	dns-nameservers 2001:19f0:300:1704::6
+
+auto eth1
+iface eth1 inet static
+	address 10.99.0.10
+	netmask 255.255.0.0
+	mtu 1450
